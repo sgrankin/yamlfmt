@@ -53,7 +53,9 @@ func Format(in io.Reader, out io.Writer, opts ...FormatOpt) error {
 		}
 
 		enc := yaml.NewEncoder(out)
-		enc.SetIndent(2)
+		for _, opt := range opts {
+			opt(enc)
+		}
 		if err := enc.Encode(&node); err != nil {
 			return fmt.Errorf("encode: %w", err)
 		}
