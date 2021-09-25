@@ -1,0 +1,9 @@
+---
+base: &base
+  name: Everyone has same name
+foo: &foo
+  !!merge <<: *base
+  age: 10
+bar: &bar
+  !!merge <<: *base
+  age: 20

@@ -1,0 +1,4 @@
+---
+base: &base
+  name: Everyone has same name
+  age: 10

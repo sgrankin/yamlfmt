@@ -1,0 +1,4 @@
+---
+key: value # value-comment
+key2: # key-comment
+  key3: value
